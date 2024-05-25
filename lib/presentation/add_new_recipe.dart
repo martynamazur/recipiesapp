@@ -187,6 +187,7 @@ class NewRecipe extends ConsumerWidget {
                   ],
                 ),
                 ListView.builder(
+                  shrinkWrap: true,
                   itemCount: ingredients.length,
                     itemBuilder: (context, index){
                       final ingredient = ingredients[index];
