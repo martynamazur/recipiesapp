@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 
-
 import 'app_router.gr.dart';
 
 @AutoRouterConfig()
@@ -17,7 +16,9 @@ class AppRouter extends $AppRouter {
     MaterialRoute(page: Favourite.page),
     MaterialRoute(page: MealTypeSearch.page),
     MaterialRoute(page: NewRecipe.page, initial:  true),
-    MaterialRoute(page: SearchIngredients.page)
+    MaterialRoute(page: SearchIngredients.page),
+    MaterialRoute(page: Profile.page),
+    MaterialRoute(page: UserRecipies.page)
 
   ];
 }
