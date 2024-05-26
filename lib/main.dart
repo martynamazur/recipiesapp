@@ -11,13 +11,16 @@ const supabaseUrl = 'https://xgvlevhtwrkakdvbloiy.supabase.co';
 
 
 void main() async{
-  //getIt.registerSingleton<AppRouter>(AppRouter());
+  WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load(fileName: ".env");
+
   String supabaseKey = dotenv.env['SUPABASE_KEY']!;
   await Supabase.initialize(url: supabaseUrl, anonKey: supabaseKey);
+
   runApp(const ProviderScope(child: MyApp()));
 
 }
+final supabase = Supabase.instance.client;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
